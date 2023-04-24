@@ -85,11 +85,27 @@ main {
 
 }
 
+.card {
+    animation: FadeInTop 700ms 175ms backwards;
+}
+
+.card img {
+    transition: all 400ms;
+}
+
 .cards .card {
     position: relative;
     /* width: 32rem; */
     height: fit-content;
+    overflow: hidden;
+    border-radius: 2rem;
 }
+
+.card img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 .cards .card span {
     font-size: 2rem;
@@ -102,6 +118,7 @@ main {
     width: 11.2rem;
     text-align: center;
     letter-spacing: 0.2rem;
+    z-index: 10;
     
 }
 
@@ -109,6 +126,69 @@ main {
     width: 100%;
     border-radius: 2rem;
 }
+
+
+.cards .card:nth-child(1) {
+    animation-delay: 200ms;
+}
+
+.cards .card:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+.cards .card:nth-child(3) {
+    animation-delay: 400ms;
+}
+
+.cards .card:nth-child(4) {
+    animation-delay: 500ms;
+}
+
+.cards .card:nth-child(5) {
+    animation-delay: 600ms;
+}
+
+.cards .card:nth-child(6) {
+    animation-delay: 700ms;
+}
+
+footer {
+    display:none;
+}
+
+
+
+@keyframes FadeInTop {
+    from {
+        opacity:0;
+        transform: translateY(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes SlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-38rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(o);
+    }
+}
+
+@keyframes LogoRotate {
+    from {
+        transform: rotateY(360deg);
+    }
+
+}
+
 
 @media(min-width:900px) {
 
@@ -122,6 +202,7 @@ main {
         position: fixed;
         display: flex;
         flex-direction: column;
+        animation: SlideIn 700ms 350ms backwards;
     }
 
     .text {
@@ -178,6 +259,24 @@ main {
         #logo-desktop {
             display: block;
             padding: 3.2rem 0;
+            animation: LogoRotate 10s 2s infinite;
+        }
+
+        footer {
+            padding-top: 5rem;
+            margin-left: 37.7rem;
+            display: block;
+        }
+
+        footer p {
+            font-size:1.4rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+        }
+
+        footer p a {
+            font-weight: 700;
+            text-decoration: none;
         }
     
     }
