@@ -38,9 +38,14 @@ header {
 
 }
 
-#logo {
+#logo-mobile {
     padding: 3.2rem 0;
 }
+
+#logo-desktop {
+    display: none;
+}
+
 
 .title {
     background-color: #cbc0d3;
@@ -165,17 +170,18 @@ main {
             grid-area: F;
         }
 
+        #logo-mobile {
+            display: none;
 
+        }
+    
+        #logo-desktop {
+            display: block;
+            padding: 3.2rem 0;
+        }
+    
+    }
 
-
-
-
-
-
-
-
-
-}
 
 @media (min-width:1440px) {
     .cards {
